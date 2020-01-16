@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const contactPath = path.join('db', 'contacts.json');
+const contactPath = path.join(__dirname, 'db', 'contacts.json');
 const encoding = 'utf8';
 
 // this function search all save contacs and write in console
