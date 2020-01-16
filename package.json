@@ -1,0 +1,28 @@
+{
+  "name": "node.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antuan159/Node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antuan159/Node.js/issues"
+  },
+  "homepage": "https://github.com/antuan159/Node.js#readme"
+}
