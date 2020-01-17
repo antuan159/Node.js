@@ -89,4 +89,6 @@ app.patch('/api/contacts/:contactId', async function(req, res) {
     res.status(404).json(err);
   }
 });
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log('server has been started...');
+});
