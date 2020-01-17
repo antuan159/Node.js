@@ -22,6 +22,10 @@
     "type": "git",
     "url": "git+https://github.com/antuan159/Node.js.git"
   },
+  "engines": {
+    "node": ">= 12.6.0",
+    "npm": ">= 6.9.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
