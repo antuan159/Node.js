@@ -10,7 +10,11 @@
     "nodemon": "^2.0.2",
     "yargs": "^15.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "rotating-file-stream": "^2.0.1",
+    "util": "^0.12.1"
+  },
   "scripts": {
     "dev": "nodemon index.js"
   },
