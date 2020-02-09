@@ -8,6 +8,7 @@ const writeFileAsync = promisify(fs.writeFile);
 const contactPath = path.join(__dirname, 'db', 'contacts.json');
 const encoding = 'utf8';
 
+
 // this function finds all save contact
 async function listContacts() {
   try {
