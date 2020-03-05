@@ -3,13 +3,7 @@ const Contacts = require("./api");
 // this function finds all save contact
 async function listContacts() {
   try {
-    let list;
-    await Contacts.find({}, function(err, listContacts) {
-      if (err) return console.log(err);
-
-      list = listContacts;
-    });
-    return list;
+    return await Contacts.find({});
   } catch (err) {
     console.log("err", err);
   }
@@ -18,12 +12,7 @@ async function listContacts() {
 // this function finds contact by Id and write in console
 async function getContactById(contactId) {
   try {
-    let contact;
-    await Contacts.find({ _id: contactId }, function(err, contactDB) {
-      if (err) return console.log(err);
-      contact = contactDB;
-    });
-    return contact;
+    return await Contacts.find({ _id: contactId });
   } catch (err) {
     console.log("err", err);
   }
@@ -38,13 +27,7 @@ async function addContact(name, email, phone) {
       phone
     };
 
-    let newContact;
-    await Contacts.create(contact, function(err, contactBD) {
-      if (err) return handleError(err);
-      newContact = contactBD;
-    });
-
-    return newContact;
+    return await Contacts.create(contact);
   } catch (err) {
     console.log("ERROR:", err);
   }
@@ -54,13 +37,12 @@ async function addContact(name, email, phone) {
 async function removeContact(contactId) {
   try {
     const deleted = await getContactById(contactId);
+
     if (!deleted) {
       return { message: "object not found" };
     }
 
-    await Contacts.deleteOne({ _id: contactId }, function(err, cb) {
-      if (err) return console.log(err);
-    });
+    await Contacts.deleteOne({ _id: contactId });
 
     return { message: "object deleted" };
   } catch (err) {
@@ -77,17 +59,11 @@ async function updateContact(contactId, { name, email, phone }) {
       return { message: "contact not found" };
     }
 
-    await Contacts.updateOne(
-      updateContact._id,
-      {
-        name: name || updateContact.name,
-        email: email || contact.email,
-        phone: phone || contact.phone
-      },
-      function(err, cb) {
-        if (err) return console.log(err);
-      }
-    );
+    await Contacts.updateOne(updateContact._id, {
+      name: name || updateContact.name,
+      email: email || contact.email,
+      phone: phone || contact.phone
+    });
 
     return { message: "contact updated" };
   } catch (err) {
