@@ -6,6 +6,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "yargs": "^15.1.0"
@@ -33,9 +34,5 @@
   "bugs": {
     "url": "https://github.com/antuan159/Node.js/issues"
   },
-  "homepage": "https://github.com/antuan159/Node.js#readme",
-  "dependencies": {
-    "nodemon": "^2.0.2",
-    "yargs": "^15.1.0"
-  }
+  "homepage": "https://github.com/antuan159/Node.js#readme"
 }
